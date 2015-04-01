@@ -11,8 +11,13 @@ public class Siswa extends Wargasekolah{
 		return "\nNis : "+nis;
 	}
 	public void ambilMapel(Mapel m){
-		this.m[nMapel] = m;
-		this.nMapel++;
+		if (nMapel >= 6 ){
+			throw new ArrayIndexOutOfBoundsException("jumlah mepel melebihi");
+		}else {
+			this.m[nMapel] = m;
+			this.nMapel++;	
+		}
+		
 	}
 	public String toString(){
 		return super.toString()+getNis();
