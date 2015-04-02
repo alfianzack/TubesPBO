@@ -2,9 +2,9 @@ public class Kelas{
 	private int nSiswa;//jumlah siswa dalam kelas
 	private String namaKelas;
 
-	public Kelas(String namaKelas, int nSiswa){
+	public Kelas(String namaKelas){
 		this.namaKelas= namaKelas;
-		this.nSiswa= nSiswa;
+		nSiswa = 0;
 	}
 	public void addSiswa(Siswa s){
 
