@@ -2,20 +2,28 @@ public class Mapel {
     private String namaMapel;
     private Guru g; //Buat nanti ngambil nilai
     
-    public void setNilai(String namaMapel) {
-        this.namaMapel = namaMapel;
-    }
-
-    public String getNamaMapel() {
-        return namaMapel;
-    }
-
+    /**
+     * Set nama Mapel
+     * @param namaMapel 
+     */
     public void setNamaMapel(String namaMapel) {
         this.namaMapel = namaMapel;
     }
-
+    
+    /**
+     * Get nama Mapel
+     * @return namaMapel
+     */
+    public String getNamaMapel() {
+        return namaMapel;
+    }
+    
+    /**
+     * toString pada class Mapel
+     * @return Nama Mapel
+     */
     public String toString() {
-        return "Mapel : " + getNamaMapel() + " Nilai : " + g.getNilai();
+        return "\nMapel : " + getNamaMapel();
     }
 
 }
