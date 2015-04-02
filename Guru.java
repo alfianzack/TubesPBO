@@ -14,7 +14,7 @@ public class Guru extends Wargasekolah{
 		System.out.println("");
 
 		System.out.println("Masukkan nama mapel : ");
-		System.out.println("masukkkan nilai ": ");
+		System.out.println("masukkkan nilai uts : ");
 		
 
 	}
