@@ -1,18 +1,29 @@
 public class Kelas{
-	private int nSiswa;//jumlah siswa dalam kelas
-	private String namaKelas;
+    private int nSiswa;//jumlah siswa dalam kelas
+    private String namaKelas;
+    private Siswa[] siswa = new Siswa[10];
 
-	public Kelas(String namaKelas){
-		this.namaKelas= namaKelas;
-		nSiswa = 0;
-	}
-	public void addSiswa(Siswa s){
+    public Kelas(String namaKelas){
+	this.namaKelas= namaKelas;
+	nSiswa= 0;        
+    }
 
-	}
-	public void addGuru(Guru g){
+    public String getNamaKelas() {
+        return namaKelas;
+    }
 
-	}
-	public String toString(){
-		return "";
-	}
+    public void setNamaKelas(String namaKelas) {
+        this.namaKelas = namaKelas;
+    }
+    
+    //Tambah Siswa
+    public void addSiswa(Siswa siswa){
+        this.siswa[nSiswa] = siswa;
+        this.nSiswa++;
+    }
+    
+    @Override
+    public String toString(){
+	return "Nama Kelas : "+getNamaKelas();
+    }
 }
