@@ -11,7 +11,9 @@ public class Guru extends Wargasekolah{
 		return "\nNIP : "+nip;
 	}
 	public void inputNilai(int n,Mapel m){
-		System.out.println()
+		System.out.println("Masukkan nama mapel : ");
+		System.out.println("masukkkan nilai ": ");
+		
 	}
 	public String toString(){
 		return super.toString()+getNip();
