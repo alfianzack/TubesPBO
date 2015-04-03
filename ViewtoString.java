@@ -11,6 +11,6 @@
  */
 public interface ViewtoString {
 
-    public String toString ();
-    
+    public String toString();
+
 }
