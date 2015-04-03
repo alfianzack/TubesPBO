@@ -28,11 +28,10 @@ public class Siswa extends WargaSekolah {
 
     /**
      * method mendapatkan Nomor Siswa
-     *
      * @return String Nomor Siswa
      */
     public String getNis() {
-        return "\nNis : " + nis;
+        return nis;
     }
 
     /**
@@ -55,7 +54,6 @@ public class Siswa extends WargaSekolah {
     /**
      * method untuk menampilkan semua nilai . inisialisasi nilai 0
      */
-
     public void lihatNilai() {
         int i = 0;
         System.out.println("Daftar Mapel ");
@@ -70,8 +68,7 @@ public class Siswa extends WargaSekolah {
      *
      * @return menampilkan nama dan nomor siswa
      */
-
     public String toString() {
-        return super.toString() + getNis();
+        return super.toString() + "NIS : " + getNis();
     }
 }
