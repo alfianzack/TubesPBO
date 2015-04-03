@@ -50,5 +50,6 @@ public interface Nilai {
      */
 
     public int getUas();
+    public int getNilai();
    
 }
