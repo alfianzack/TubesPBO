@@ -31,11 +31,44 @@ public class Guru extends Wargasekolah implements Nilai {
         return (uas + uts + kuis + tugas) / 3;
     }
 
-    public void setNilai(int tugas, int uas, int uts, int kuis) {
-        this.uas = uas;
-        this.uts = uts;
-        this.kuis = kuis;
+    @Override
+    public void setTugas(int tugas) {
         this.tugas = tugas;
+    }
+
+    @Override
+    public void setUts(int uts) {
+        this.uts = uts;
+    }
+
+    @Override
+    public void setKuis(int kuis) {
+        this.kuis = kuis;
+    }
+
+    @Override
+    public void setUas(int uas) {
+        this.uas = uas;
+    }
+
+    @Override
+    public int getTugas() {
+        return tugas;
+    }
+
+    @Override
+    public int getUts() {
+        return uts;
+    }
+
+    @Override
+    public int getKuis() {
+        return kuis;
+    }
+
+    @Override
+    public int getUas() {
+        return uas;
     }
 
     public String toString() {
