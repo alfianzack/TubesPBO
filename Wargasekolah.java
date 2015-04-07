@@ -9,7 +9,7 @@ package tubes;
  *
  * @author alfianzack
  */
-public class WargaSekolah {
+public class WargaSekolah implements ViewtoString{
 
     private String nama;
 
