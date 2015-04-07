@@ -1,13 +1,42 @@
-public class Wargasekolah{
-	private String nama;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tubes;
 
-	public Wargasekolah(String nama){
-		this.nama= nama;
-	}
-	public String getNama(){
-		return nama;
-	}
-	public String toString(){
-		return "Nama : "+getNama();
-	}
+/**
+ *
+ * @author alfianzack
+ */
+public class WargaSekolah {
+
+    private String nama;
+
+    /**
+     * constructor
+     * @param nama mengeset nama
+     */
+    public WargaSekolah(String nama) {
+        this.nama = nama;
+    }
+
+    /**
+     * method mengembalikan nama
+     *
+     * @return String nama
+     */
+    public String getNama() {
+        return nama;
+    }
+
+    /**
+     * method menampilkan nama
+     *
+     * @return nama
+     */
+    public String toString() {
+        return "Nama : " + getNama();
+    }
+
 }
