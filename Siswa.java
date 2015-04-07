@@ -9,7 +9,7 @@ package tubes;
  *
  * @author alfianzack
  */
-public class Siswa extends WargaSekolah {
+public class Siswa extends WargaSekolah implements ViewString{
 
     private String nis;
     /**
@@ -51,24 +51,27 @@ public class Siswa extends WargaSekolah {
 
     }
 
-    /**
-     * method untuk menampilkan semua nilai . inisialisasi nilai 0
-     */
-    public void lihatNilai() {
-        int i = 0;
-        System.out.println("Daftar Mapel ");
-        while (i != nMapel) {
-            System.out.println(m[i].toString() + "\n");
-            i++;
-        }
+    //Jumlah mepel yang diambil
+    public int getJumlahMapel(){
+        return nMapel;
     }
+    //Daftar mapel yang diambil
+    public String viewMapel(){
+        viewPel ="";
+        for (int count=0; count<nMapel;count++){
+            int i = count+1;
+            viewPel = viewPel +" "+i+". "+mapel[count]+"\n";
+        }
+        return viewPel;
+    }
+    
 
     /**
      * method menampilkan isi dari siswa
      *
-     * @return menampilkan nama dan nomor siswa
+     * @return menampilkan nama, nomor siswa, jumlah mapel yang diambil dan daftar mapel
      */
     public String toString() {
-        return super.toString() + "NIS : " + getNis();
+        return super.toString() + "\nNIS : "+getNis()+"\nJumlah Mapel yang diambil : "+getJumlahMapel()+"\nMapel : \n"+viewMapel();
     }
 }
