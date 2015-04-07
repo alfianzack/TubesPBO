@@ -12,23 +12,6 @@ public class Mapel implements ViewtoString {
         this.namaMapel = namaMapel;
     }
 
-    /**
-     * Get nama Mapel
-     *
-     * @return namaMapel
-     */
-    public String getNamaMapel() {
-        return namaMapel;
-    }
-<<<<<<< HEAD
-        /**
-         * toString pada class Mapel
-         *
-         * @return Nama Mapel
-         */
-    @Override
-=======
-    
     //untuk memberikan nilai setiap mapel
        public void setTugas(int tugas) {
         this.tugas = tugas;
@@ -61,14 +44,18 @@ public class Mapel implements ViewtoString {
     public int getUas() {
         return uas;
     }
-
+    
+    public double getNilai(){
+        double nilaiTotal = (tugas*0.1)+(kuis*0.2)+(uts*0.35)+(uas*0.35);
+        return nilaiTotal;
+    }
     /**
      * toString pada class Mapel
      * @return Nama Mapel
      */
 >>>>>>> master
     public String toString() {
-        return getNamaMapel();
+        return getNamaMapel()+" : "+getNilai();
     }
 
 }
