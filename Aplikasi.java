@@ -87,12 +87,10 @@ public class Aplikasi {
 //        Mapel m3 = new Mapel("Sejarah");
 //        k1.addSiswa(s1);
 //        k1.addSiswa(s2);
+//        k1.addSiswa(s3);
+//        k1.addSiswa(s4);
 //        s1.ambilMapel(m1);
 //        s1.ambilMapel(m2);
-//        s1.ambilMapel(m3);
-//        s2.ambilMapel(m2);
-//        k1.viewSiswa();
-//        s1.viewMapel();
         Sekolah sklh = new Sekolah();
         sklh.setNamaSekolah("SMA Negeri Bandung");
         try {
