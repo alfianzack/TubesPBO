@@ -64,7 +64,15 @@ public class Siswa extends WargaSekolah implements ViewString{
         }
         return viewPel;
     }
-    
+        public void setKuis(String s, int n){
+        int i=0;
+        while(i!=nMapel){
+            if (m[i].getNamaMapel().equals(s)){
+                m[i].setKuis(n);
+            }
+            i++;
+        }
+    }
 
     /**
      * method menampilkan isi dari siswa
