@@ -19,12 +19,20 @@ public class Guru extends Wargasekolah implements Nilai {
         return "\nNIP : " + nip;
     }
 
-    public void inputNilai(int n, Mapel m) {
-        System.out.println("");
-
-        System.out.println("Masukkan nama mapel : ");
-        System.out.println("masukkkan nilai uts : ");
-
+    public void addSiswa(Siswa s){
+        daftarSiswa[nSiswa] = s;
+        nSiswa++;
+    }
+    
+    public void setKuis(String nos, String mapel,int nilai){
+        int i=0;
+        while (i!=nSiswa){
+            if(daftarSiswa[i].getNis().equals(nos)){
+                daftarSiswa[i].setKuis(mapel, nilai);
+                System.out.println(daftarSiswa[i].toString());
+            }
+            i++;
+        }
     }
 
     public String toString() {
