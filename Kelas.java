@@ -1,5 +1,5 @@
 
-public class Kelas implements ViewString{
+public class Kelas implements ViewtoString{
 
     private int nSiswa;//jumlah siswa dalam kelas
     private String namaKelas;
