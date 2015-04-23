@@ -15,7 +15,7 @@ public class Siswa extends WargaSekolah implements ViewtoString {
     /**
      * membuat array mapel yang dibatasi 3 mapel saja yang diambil
      */
-    private Mapel m[] = new Mapel[3];//mapel yang diambil oleh siswa
+    private Mapel m[] = new Mapel[2];//mapel yang diambil oleh siswa
     /**
      * inisialisasi jumlah mapel yang akan diambil
      */
@@ -28,6 +28,7 @@ public class Siswa extends WargaSekolah implements ViewtoString {
 
     /**
      * method mendapatkan Nomor Siswa
+     *
      * @return String Nomor Siswa
      */
     public String getNis() {
@@ -41,43 +42,66 @@ public class Siswa extends WargaSekolah implements ViewtoString {
      * melempar exception
      */
     public void ambilMapel(Mapel m) {
-        try {
-            this.m[nMapel] = m;
-            this.nMapel++;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            throw new ArrayIndexOutOfBoundsException("Jumlah mapel melebihi");
-
-        }
+        this.m[nMapel] = m;
+        this.nMapel++;
+        
 
     }
 
     //Jumlah mepel yang diambil
-    public int getJumlahMapel(){
+    public int getJumlahMapel() {
         return nMapel;
     }
+
     //Daftar mapel yang diambil
-    public String viewMapel(){
-        String viewPel ="";
-        for (int count=0; count<nMapel;count++){
-            int i = count+1;
-            viewPel = viewPel +" "+i+". "+m[count].toString()+"\n";
+    public String viewMapel() {
+        String viewPel = "";
+        for (int count = 0; count < nMapel; count++) {
+            int i = count + 1;
+            viewPel +=i + ". " + m[count].toString() + "\n";
         }
+        
         return viewPel;
     }
     
-    public void setNilai(String nama, int uts,int uas,int kuis,int tugas){
+    public String viewAllScore(){
+        String viewAll="";
+        for(int i=0;i<nMapel;i++){
+            viewAll += "Mapel : "+m[i].getNamaMapel()
+                        +"\nKuis : "+m[i].getKuis()
+                        +"\nTugas : "+m[i].getTugas()
+                        +"\nUTS : "+m[i].getUts()
+                        +"\nUAS : "+m[i].getUas()
+                        +"\nNilai total : "+m[i].getNilai()
+                        +"\n===================\n";
+        }
+        return viewAll;
+    }
+    
+    public Mapel cekMapel(String nama){
         int i=0;
-        while(i!=nMapel){
-            if (m[i].getNamaMapel().equals(nama)){
-                m[i].setNilai(uts,uas,kuis,tugas);
+        Mapel carim = null;
+        while (i!=nMapel){
+            if (m[i].getNamaMapel().equals(nama)) {
+                carim = m[i];
+            }
+            i++;
+        }
+        return carim;
+    }
+
+    public void setNilai(String nama, int uts, int uas, int kuis, int tugas) {
+        int i = 0;
+        while (i != nMapel) {
+            if (m[i].getNamaMapel().equals(nama)) {
+                m[i].setNilai(uts, uas, kuis, tugas);
             }
             i++;
         }
     }
 
     public String toString() {
-        return super.toString() + "\nNIS : "+getNis()+"\nMapel : \n"+viewMapel();
+        return super.toString() + "\nNIS : " + getNis() + "\nMapel : \n" + viewMapel();
     }
-
 
 }

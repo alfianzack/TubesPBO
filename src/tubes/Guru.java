@@ -12,14 +12,14 @@ package tubes;
 public class Guru extends WargaSekolah implements ViewtoString {
 
     private String nip;
-    private Siswa[] daftarSiswa = new Siswa[3];//array siswa yang dianajar oleh guru
+    private Siswa[] daftarSiswa;//array siswa yang dianajar oleh guru
     private int uas, uts, kuis, tugas;
     private int nSiswa = 0;
-
 
     public Guru(String nama, String nip) {
         super(nama);
         this.nip = nip;
+        daftarSiswa = new Siswa[4];
     }
 
     public String getNip() {
@@ -40,27 +40,52 @@ public class Guru extends WargaSekolah implements ViewtoString {
             i++;
         }
     }
-    
-    public String viewSiswa(){
+
+    public Siswa cariSiswa(String nama) {
         int i = 0;
-        String temp = "";
-        while (i!=nSiswa){
-            temp += daftarSiswa[i].toString()+"\n";
+        Siswa s = null;
+        while (i != nSiswa) {
+            if (daftarSiswa[i].getNama().equals(nama)) {
+                s = daftarSiswa[i]; 
+            }
             i++;
         }
-        return temp;
+        return s;
     }
-    
-    public String viewNilai(){
+
+    public String viewSiswa() {
         int i = 0;
         String temp = "";
-        while (i!=nSiswa){
-            temp += daftarSiswa[i].getNama()+" \n" + daftarSiswa[i].viewMapel()+"\n";
+        while (i != nSiswa) {
+            temp += "Nama : " + daftarSiswa[i].getNama() + "\n"
+                    + "Nis :" + daftarSiswa[i].getNis() + "\n";
             i++;
         }
         return temp;
     }
 
+    public String viewNilai() {
+        int i = 0;
+        String temp = "";
+        while (i != nSiswa) {
+            temp += daftarSiswa[i].getNama() + " \n" + daftarSiswa[i].viewMapel() + "\n";
+            i++;
+        }
+        return temp;
+    }
+    
+    public Siswa cekNis(String nis){
+        Siswa a = null;
+        int i=0;
+        while(i!=nSiswa){
+            if(nis.equals(daftarSiswa[i].getNis())){
+                a = daftarSiswa[i];
+            }
+            i++;
+        }
+        return a;
+    }
+    
     public String toString() {
         return super.toString() + "\nNIP : " + getNip();
     }

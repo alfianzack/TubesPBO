@@ -68,7 +68,7 @@ public class Mapel implements ViewtoString {
 
     @Override
     public String toString() {
-        return "namaMapel=" + namaMapel + "\nNilai : "+getNilai();
+        return "Nama Mapel = " + namaMapel + "\nNilai : "+getNilai();
     }
     
     
