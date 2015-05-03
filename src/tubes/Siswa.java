@@ -89,6 +89,14 @@ public class Siswa extends WargaSekolah implements ViewtoString {
         }
         return carim;
     }
+    public void ulangMapel(){
+        int a=nMapel-1;
+        while(nMapel!=0){
+            m[a]=null;
+            nMapel--;
+            a--;
+        }
+    }
 
     public void setNilai(String nama, int uts, int uas, int kuis, int tugas) {
         int i = 0;
