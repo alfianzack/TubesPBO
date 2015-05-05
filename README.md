@@ -1,6 +1,3 @@
 # TubesPBO
-buat tubes
-coba baca
-yodi push
-
-\nJangan Lupa di kasih dokumentasinya tiap method OK, biar tau buat apa methodnya OK oK OK OK SEMANGAT KAWAN2, semoga Tubes ini bisa dapat nilai maksimal dan Bisa main DOTA sepuasnya, ahahahahah......................Malah curhat
+Program yang dibuat untuk memenuhi persyaratan Tugas Besar mata kuliah Pemrograman Berorientasi Objek.
+Berfungsi untuk membantu Guru ataupun Siswa dalam sekolah untuk menginputkan nilai sekaligus melihat nilai yang telah diinputkan.
